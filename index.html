@@ -5,9 +5,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="assets/css/vendor.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="/assets/css/vendor.css" />
 		<!-- Thêm vendor.css -->
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
 		<!-- style.css -->
 	</head>
 
@@ -15,45 +20,64 @@
 		<!-- Include header -->
 		<header></header>
 
-
 		<!-- Main content of the page -->
 		<main>
 			<!-- Main content -->
 			<div class="lv_pageWrapper_container">
-				<div class="lv_loveForm_wrapper">
-					<div class="lv_loveForm_header">
-						<h1 class="lv_loveForm_title">TO MEE</h1>
-						<p class="lv_loveForm_subTitle">High-End Chocolate</p>
-					</div>
+				<div class="container py-5">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-8 col-lg-6">
+							<div class="lv_loveForm_wrapper">
+								<div class="lv_loveForm_header">
+									<img class="lv_loveForm_header_img" src="/assets/images/logo-to-mee.png" alt="" />
+								</div>
 
-					<div class="lv_loveForm_intro">
-						<h2 class="lv_loveForm_introTitle">Gửi Gắm Lời Yêu Thương</h2>
-						<p class="lv_loveForm_introDesc">"You Mean The World To Me"</p>
-					</div>
+								<div class="lv_loveForm_intro">
+									<h2 class="lv_loveForm_introTitle">Gửi Gắm Lời Yêu Thương</h2>
+								</div>
 
-					<form class="lv_loveForm_form">
-						<div class="lv_loveForm_fieldGroup">
-							<label class="lv_loveForm_labelReceiver">Người nhận</label>
-							<input type="text" class="lv_loveForm_inputReceiver" placeholder="Ví dụ: My Love, Mom..." />
+								<form class="lv_loveForm_form">
+									<div class="lv_loveForm_fieldGroup">
+										<label class="lv_loveForm_labelReceiver">Người nhận</label>
+										<input type="text" class="lv_loveForm_inputReceiver" placeholder="Ví dụ: My Love, Mom..." />
+									</div>
+
+									<div class="lv_loveForm_fieldGroup">
+										<label class="lv_loveForm_labelSender">Từ người gửi</label>
+										<input type="text" class="lv_loveForm_inputSender" placeholder="Tên của bạn" />
+									</div>
+
+									<div class="lv_loveForm_fieldGroup">
+										<label class="lv_loveForm_labelMessage">Lời nhắn</label>
+										<textarea class="lv_loveForm_textareaMessage" placeholder="Viết lời yêu thương tại đây..."></textarea>
+										<span class="lv_loveForm_charCount">0 / 200</span>
+									</div>
+
+									<button type="submit" class="lv_loveForm_submitButton">❤️ Lưu Lời Chúc</button>
+								</form>
+							</div>
+
+							<!-- preview -->
+							<div class="lv_cardPreview_wrapper ">
+								<div class="lv_cardPreview_container">
+									<span class="lv_cardPreview_label"> LIVE PREVIEW </span>
+
+									<div class="lv_cardPreview_card">
+										<div class="lv_cardPreview_border">
+											<div class="lv_cardPreview_content">
+												<h1 class="lv_cardPreview_title">Gửi...</h1>
+
+												<div class="lv_cardPreview_divider"></div>
+
+												<p class="lv_cardPreview_message">Lời chúc của bạn sẽ xuất hiện rực rỡ và sang trọng tại đây...</p>
+
+												<span class="lv_cardPreview_signature"> — Tomee </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-
-						<div class="lv_loveForm_fieldGroup">
-							<label class="lv_loveForm_labelSender">Từ người gửi</label>
-							<input type="text" class="lv_loveForm_inputSender" placeholder="Tên của bạn" />
-						</div>
-
-						<div class="lv_loveForm_fieldGroup">
-							<label class="lv_loveForm_labelMessage">Lời nhắn</label>
-							<textarea class="lv_loveForm_textareaMessage" placeholder="Viết lời yêu thương tại đây..."></textarea>
-							<span class="lv_loveForm_charCount">0 / 200</span>
-						</div>
-
-						<button type="submit" class="lv_loveForm_submitButton">❤️ Lưu Lời Chúc</button>
-					</form>
-
-					<div class="lv_loveForm_notice">
-						<span class="lv_loveForm_noticeIcon">ⓘ</span>
-						<p class="lv_loveForm_noticeText">Lời chúc của bạn sẽ được in trên thiệp cao cấp kèm theo hộp quà ToMee. Vui lòng kiểm tra kỹ chính tả trước khi lưu.</p>
 					</div>
 				</div>
 			</div>
@@ -62,10 +86,9 @@
 		<!-- Include footer -->
 		<footer></footer>
 
-
-		<script src="assets/js/vendor.js"></script>
+		<script src="/assets/js/vendor.js"></script>
 		<!-- vendor.js -->
-		<script src="assets/js/main.js"></script>
+		<script src="/assets/js/main.js"></script>
 		<!-- main.js -->
 	</body>
 </html>

@@ -1,1 +1,186 @@
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background-color:#faf6f5}.lv_pageWrapper_container{display:grid;place-items:center;min-height:100vh;padding:24px}.lv_loveForm_wrapper{width:420px;background-color:#fff;border-radius:16px;padding:32px 28px;box-shadow:0 12px 32px rgba(0,0,0,.08);display:grid;row-gap:24px}.lv_loveForm_header{text-align:center}.lv_loveForm_title{font-size:24px;letter-spacing:2px;margin:0}.lv_loveForm_subTitle{font-size:12px;color:#999;margin-top:4px}.lv_loveForm_intro{text-align:center}.lv_loveForm_introTitle{font-size:20px;margin:0}.lv_loveForm_introDesc{font-size:14px;color:#777;margin-top:6px}.lv_loveForm_form{display:grid;row-gap:18px}.lv_loveForm_fieldGroup{display:grid;row-gap:6px}.lv_loveForm_labelMessage,.lv_loveForm_labelReceiver,.lv_loveForm_labelSender{font-size:13px;color:#555}.lv_loveForm_inputReceiver,.lv_loveForm_inputSender{height:44px;padding:0 12px;font-size:14px;border-radius:8px;border:1px solid #e0e0e0}.lv_loveForm_textareaMessage{height:120px;padding:10px 12px;font-size:14px;border-radius:8px;border:1px solid #e0e0e0;resize:none}.lv_loveForm_charCount{font-size:11px;color:#aaa;text-align:right}.lv_loveForm_submitButton{height:48px;border-radius:24px;border:none;background-color:#e8a1ad;font-size:15px;color:#fff;cursor:pointer}.lv_loveForm_submitButton:hover{background-color:#dd8f9c}.lv_loveForm_notice{display:grid;grid-template-columns:20px 1fr;column-gap:8px;align-items:start}.lv_loveForm_noticeIcon{font-size:14px;color:#e8a1ad}.lv_loveForm_noticeText{font-size:12px;color:#888;line-height:1.4;margin:0}body{margin:0;font-family:Arial,Helvetica,sans-serif;background-color:#faf6f5}.lv_pageWrapper_container{display:grid;place-items:center;min-height:100vh;padding:24px}.lv_loveForm_wrapper{width:420px;background-color:#fff;border-radius:16px;padding:32px 28px;box-shadow:0 12px 32px rgba(0,0,0,.08);display:grid;row-gap:24px}.lv_loveForm_header{text-align:center}.lv_loveForm_title{font-size:24px;letter-spacing:2px;margin:0}.lv_loveForm_subTitle{font-size:12px;color:#999;margin-top:4px}.lv_loveForm_intro{text-align:center}.lv_loveForm_introTitle{font-size:20px;margin:0}.lv_loveForm_introDesc{font-size:14px;color:#777;margin-top:6px}.lv_loveForm_form{display:grid;row-gap:18px}.lv_loveForm_fieldGroup{display:grid;row-gap:6px}.lv_loveForm_labelMessage,.lv_loveForm_labelReceiver,.lv_loveForm_labelSender{font-size:13px;color:#555}.lv_loveForm_inputReceiver,.lv_loveForm_inputSender{height:44px;padding:0 12px;font-size:14px;border-radius:8px;border:1px solid #e0e0e0}.lv_loveForm_textareaMessage{height:120px;padding:10px 12px;font-size:14px;border-radius:8px;border:1px solid #e0e0e0;resize:none}.lv_loveForm_charCount{font-size:11px;color:#aaa;text-align:right}.lv_loveForm_submitButton{height:48px;border-radius:24px;border:none;background-color:#e8a1ad;font-size:15px;color:#fff;cursor:pointer}.lv_loveForm_submitButton:hover{background-color:#dd8f9c}.lv_loveForm_notice{display:grid;grid-template-columns:20px 1fr;column-gap:8px;align-items:start}.lv_loveForm_noticeIcon{font-size:14px;color:#e8a1ad}.lv_loveForm_noticeText{font-size:12px;color:#888;line-height:1.4;margin:0}
+body {
+	line-height: 1.5;
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 400;
+	color: #231f20;
+}
+
+.lv_pageWrapper_container {
+	background-color: #fef6fa;
+}
+
+.lv_loveForm_wrapper {
+	background-color: #ffffff;
+	border-radius: 16px;
+	padding: 32px 28px;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+	display: grid;
+	row-gap: 24px;
+}
+
+/* Header */
+.lv_loveForm_header {
+	text-align: center;
+}
+
+/* Intro */
+.lv_loveForm_intro {
+	text-align: center;
+}
+
+.lv_loveForm_introTitle {
+	font-size: 24px;
+	margin: 0px;
+	font-weight: 600;
+	color: #231f20;
+}
+
+/* Form */
+.lv_loveForm_form {
+	display: grid;
+	row-gap: 18px;
+}
+
+.lv_loveForm_fieldGroup {
+	display: grid;
+	row-gap: 6px;
+}
+
+.lv_loveForm_labelReceiver,
+.lv_loveForm_labelSender,
+.lv_loveForm_labelMessage {
+	font-size: 16px;
+	color: #231f20;
+	font-weight: 500;
+}
+
+.lv_loveForm_inputReceiver,
+.lv_loveForm_inputSender {
+	height: 48px;
+	padding: 0 16px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: 2px solid #f9d3e0;
+	outline: none !important;
+}
+
+.lv_loveForm_inputReceiver:focus,
+.lv_loveForm_inputSender:focus,
+.lv_loveForm_textareaMessage:focus {
+	border: 2px solid #ffe5d6 !important;
+}
+
+.lv_loveForm_textareaMessage {
+	height: 120px;
+	padding: 10px 16px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: 2px solid #f9d3e0;
+	resize: none;
+	outline: none !important;
+}
+
+.lv_loveForm_charCount {
+	font-size: 11px;
+	color: #aaaaaa;
+	text-align: right;
+}
+
+/* Button */
+.lv_loveForm_submitButton {
+	height: 48px;
+	border-radius: 24px;
+	border: none;
+	background-color: #ffe5d6 !important;
+	font-size: 16px;
+	color: #231f20 !important;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.lv_loveForm_submitButton:hover {
+	background-color: #f9d3e0 !important;
+}
+
+.lv_loveForm_header_img {
+	width: 100px;
+	height: auto;
+}
+
+.lv_cardPreview_container {
+	display: grid;
+	place-items: center;
+	border-radius: 16px;
+}
+
+.lv_cardPreview_card {
+	width: 100%;
+	min-height: 420px;
+	display: grid;
+	place-items: center;
+	border-radius: 16px;
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+	background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.2) 45%, rgba(255, 255, 255, 0) 75%), linear-gradient(135deg, #fefcfc 0%, #fcebed 32%, #f7dde5 52%, #fce8dc 72%, #fff6f2 100%);
+}
+
+.lv_cardPreview_border {
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+	border: 1px solid #e6cfa5;
+	display: grid;
+	place-items: center;
+	border-radius: 16px;
+}
+
+.lv_cardPreview_content {
+	width: 100%;
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	justify-items: center;
+	row-gap: 16px;
+	text-align: center;
+	padding: 24px 32px;
+}
+
+.lv_cardPreview_title {
+	font-size: 26px;
+	font-weight: 500;
+	color: #231f20;
+	margin: 0;
+}
+
+.lv_cardPreview_divider {
+	width: 36px;
+	height: 1px;
+	background-color: #e6cfa5;
+}
+
+.lv_cardPreview_message {
+	font-size: 18px;
+	color: #6b7280;
+	margin: 0;
+}
+
+.lv_cardPreview_signature {
+	font-size: 16px;
+	font-weight: 500;
+	color: #231f20;
+	margin-top: 12px;
+}
+
+.lv_cardPreview_label {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #b6b6b6;
+	margin-bottom: 20px;
+	display: block;
+	text-align: center;
+}
+
+.lv_cardPreview_wrapper {
+	padding-top: 80px;
+}
