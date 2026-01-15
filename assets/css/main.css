@@ -184,3 +184,174 @@ body {
 .lv_cardPreview_wrapper {
 	padding-top: 80px;
 }
+
+/* wish */
+body {
+    margin: 0;
+    background-color: #faf6f4;
+    font-family: "Times New Roman", serif;
+}
+
+/* Page wrapper */
+.lv_wish_pageWrapper {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.lv_wish_container {
+    width: 820px;
+    display: grid;
+    justify-items: center;
+    row-gap: 42px;
+}
+
+/* Title */
+.lv_wish_title {
+    display: grid;
+    justify-items: center;
+    row-gap: 12px;
+}
+
+.lv_wish_titleMain {
+    font-size: 26px;
+    color: #2b2b2b;
+    letter-spacing: 0.5px;
+}
+
+.lv_wish_titleQuote {
+    font-size: 14px;
+    font-style: italic;
+    color: #9a9a9a;
+}
+
+/* Message block */
+.lv_wish_message {
+    display: grid;
+    justify-content: center;
+}
+
+/* Toggle checkbox */
+.lv_wish_toggle {
+    display: none;
+}
+
+/* Envelope wrapper */
+.lv_wish_envelope {
+    position: relative;
+    width: 420px;
+    height: 240px;
+    cursor: pointer;
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.12));
+}
+
+/* Envelope back */
+.lv_wish_envelopeBack {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(
+        to bottom,
+        #f6ebe4,
+        #ead9cf
+    );
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Envelope left */
+.lv_wish_envelopeLeft {
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 210px solid #e7d4c8;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    z-index: 2;
+}
+
+/* Envelope right */
+.lv_wish_envelopeRight {
+    position: absolute;
+    bottom: -14px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 210px solid #ddc7ba;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    z-index: 2;
+}
+
+/* Envelope top flap */
+.lv_wish_envelopeFlap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 210px solid transparent;
+    border-right: 210px solid transparent;
+    border-top: 120px solid #efe1d8;
+    transform-origin: top center;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 4;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+}
+
+/* Letter */
+.lv_wish_letter {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    width: 360px;
+    padding: 32px 30px;
+    transform: translateX(-50%) translateY(120px);
+    background-color: #fffdfb;
+    border-radius: 3px;
+    box-shadow:
+        0 8px 16px rgba(0,0,0,0.08),
+        0 20px 40px rgba(0,0,0,0.12);
+    display: grid;
+    row-gap: 20px;
+    opacity: 0;
+    transition:
+        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.6s ease;
+    z-index: 3;
+}
+
+/* Letter content */
+.lv_wish_letterTo {
+    font-size: 15px;
+    color: #6b6b6b;
+}
+
+.lv_wish_letterContent {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #3f3f3f;
+}
+
+.lv_wish_letterSign {
+    font-size: 15px;
+    text-align: center;
+    color: #5a5a5a;
+}
+
+/* Open state */
+.lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_envelopeFlap {
+    transform: rotateX(-180deg);
+}
+
+.lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_letter {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
