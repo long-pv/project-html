@@ -20,10 +20,41 @@
 		<!-- Include header -->
 		<header></header>
 
+		<script src="/assets/js/animate-heart-canvas-browser.js"></script>
+		<script>
+			let queryData = getSearchData();
+			console.log(queryData);
+			let animateHeartCanvas = new AnimateHeartCanvas(Number(queryData.hMin), Number(queryData.hMax), Number(queryData.countHeart), Number(queryData.sizeMin), Number(queryData.sizeMax), queryData.bgColor);
+
+			/****************************
+			 *
+			 *  获取地址栏get数据
+			 *
+			 *  - 有值的时候返回一个包含所有参数的对象
+			 *  - 无值的时候，返回 `false`
+			 *
+			 ****************************/
+
+			function getSearchData() {
+				let searchString = location.search;
+				if (searchString) {
+					let obj = {};
+					searchString = searchString.substring(1, searchString.length);
+					let tempArray = searchString.split("&");
+					tempArray.forEach((item) => {
+						obj[item.split("=")[0]] = decodeURIComponent(item.split("=")[1]);
+					});
+					return obj;
+				} else {
+					return false;
+				}
+			}
+		</script>
+
 		<!-- Main content of the page -->
 		<main>
 			<!-- Main content -->
-			<div class="container py-5">
+			<div class="container">
 				<div class="lv_wish_pageWrapper">
 					<div class="lv_wish_container">
 						<!-- Title -->
@@ -53,8 +84,7 @@
 									<div class="lv_wish_letterTo">Gửi: My Love</div>
 
 									<div class="lv_wish_letterContent">
-										Chúc em một ngày mới thật ngọt ngào, tràn đầy niềm vui<br />
-										và hạnh phúc. Luôn yêu em!
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. In quo repellat esse consequatur architecto odio eligendi accusantium, dolore nobis perferendis eveniet non ipsum quia porro deleniti. Culpa, delectus expedita? Rem!
 									</div>
 
 									<div class="lv_wish_letterSign">— Anh Yêu</div>
@@ -70,6 +100,12 @@
 
 		<!-- Include footer -->
 		<footer></footer>
+
+		<style>
+			canvas {
+				opacity: 0.08;
+			}
+		</style>
 
 		<script src="/assets/js/vendor.js"></script>
 		<!-- vendor.js -->

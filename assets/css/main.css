@@ -186,14 +186,18 @@ body {
 }
 
 .lv_wish_pageWrapper {
-	display: grid;
-	place-items: center;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
 }
 
 .lv_wish_container {
 	display: grid;
 	justify-items: center;
 	row-gap: 16px;
+	margin-top: 48px;
+	margin-bottom: 48px;
 }
 
 /* ===== TITLE ===== */
@@ -279,9 +283,8 @@ body {
 	bottom: 24px;
 	left: 50%;
 	width: 360px;
-	padding: 32px;
+	padding: 32px 24px;
 	transform: translateX(-50%) translateY(140px);
-	background: rgba(254, 246, 250, 0.96);
 	border-radius: 10px;
 	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 	backdrop-filter: blur(2px);
@@ -289,22 +292,30 @@ body {
 	transition: 0.9s ease;
 	z-index: 20;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	background-color: #fff;
 }
 
 /* ===== LETTER TEXT ===== */
 .lv_wish_letterTo {
-	font-size: 15px;
+	font-size: 12px;
 	color: #9a8f95;
 }
 
 .lv_wish_letterContent {
-	font-size: 16px;
-	line-height: 26px;
-	color: #6a5f65;
+	font-size: 14px;
+	color: #231f20;
+	font-style: italic;
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* số dòng tối đa */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .lv_wish_letterSign {
-	font-size: 15px;
+	font-size: 12px;
 	color: #8a7f85;
 }
 
@@ -423,5 +434,9 @@ body {
 
 	.lv_wish_envelopeSeal {
 		bottom: 42px;
+	}
+
+	.lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_letter {
+		transform: translateX(-50%) translateY(79px);
 	}
 }
