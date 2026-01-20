@@ -1,1 +1,5 @@
-$(document).ready(function(){$(".carousel").slick({slidesToShow:3,dots:!0,centerMode:!0})});
+$(document).ready(function () {
+	$(".lv_wish_envelopeWrapper").on("click", function () {
+		$(this).toggleClass("open");
+	});
+});

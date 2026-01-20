@@ -185,173 +185,243 @@ body {
 	padding-top: 80px;
 }
 
-/* wish */
-body {
-    margin: 0;
-    background-color: #faf6f4;
-    font-family: "Times New Roman", serif;
-}
-
-/* Page wrapper */
 .lv_wish_pageWrapper {
-    min-height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+	display: grid;
+	place-items: center;
 }
 
-/* Main container */
 .lv_wish_container {
-    width: 820px;
-    display: grid;
-    justify-items: center;
-    row-gap: 42px;
+	display: grid;
+	justify-items: center;
+	row-gap: 16px;
 }
 
-/* Title */
+/* ===== TITLE ===== */
 .lv_wish_title {
-    display: grid;
-    justify-items: center;
-    row-gap: 12px;
+	text-align: center;
 }
 
 .lv_wish_titleMain {
-    font-size: 26px;
-    color: #2b2b2b;
-    letter-spacing: 0.5px;
+	font-size: 24px;
+	margin: 0px;
+	font-weight: 600;
+	color: #231f20;
 }
 
-.lv_wish_titleQuote {
-    font-size: 14px;
-    font-style: italic;
-    color: #9a9a9a;
-}
-
-/* Message block */
-.lv_wish_message {
-    display: grid;
-    justify-content: center;
-}
-
-/* Toggle checkbox */
+/* ===== TOGGLE ===== */
 .lv_wish_toggle {
-    display: none;
+	display: none;
 }
 
-/* Envelope wrapper */
+/* ===== ENVELOPE ===== */
 .lv_wish_envelope {
-    position: relative;
-    width: 420px;
-    height: 240px;
-    cursor: pointer;
-    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.12));
+	position: relative;
+	width: 420px;
+	height: 300px;
+	cursor: pointer;
+	perspective: 1200px;
+	filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.08));
 }
 
-/* Envelope back */
+/* ===== BODY ===== */
 .lv_wish_envelopeBack {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(
-        to bottom,
-        #f6ebe4,
-        #ead9cf
-    );
-    border-radius: 4px;
-    z-index: 1;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 190px;
+	background: linear-gradient(to bottom, rgba(254, 246, 250, 0.95), rgba(249, 211, 224, 0.7));
+	border-radius: 12px;
+	z-index: 1;
 }
 
-/* Envelope left */
-.lv_wish_envelopeLeft {
-    position: absolute;
-    bottom: -14px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 210px solid #e7d4c8;
-    border-top: 80px solid transparent;
-    border-bottom: 80px solid transparent;
-    z-index: 2;
-}
-
-/* Envelope right */
+/* ===== SIDE FOLDS ===== */
+.lv_wish_envelopeLeft,
 .lv_wish_envelopeRight {
-    position: absolute;
-    bottom: -14px;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-right: 210px solid #ddc7ba;
-    border-top: 80px solid transparent;
-    border-bottom: 80px solid transparent;
-    z-index: 2;
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 95px solid transparent;
+	border-bottom: 95px solid transparent;
+	z-index: 2;
 }
 
-/* Envelope top flap */
+.lv_wish_envelopeLeft {
+	left: 0;
+	border-left: 210px solid rgba(249, 211, 224, 0.65);
+}
+
+.lv_wish_envelopeRight {
+	right: 0;
+	border-right: 210px solid rgba(249, 211, 224, 0.5);
+}
+
+/* ===== TOP FLAP ===== */
 .lv_wish_envelopeFlap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 210px solid transparent;
-    border-right: 210px solid transparent;
-    border-top: 120px solid #efe1d8;
-    transform-origin: top center;
-    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 4;
-    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+	position: absolute;
+	top: 110px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 210px solid transparent;
+	border-right: 210px solid transparent;
+	border-top: 120px solid rgba(249, 211, 224, 0.6);
+	filter: blur(0.25px);
+	transform-origin: top center;
+	transform-style: preserve-3d;
+	transition: transform 0.9s ease;
+	z-index: 4;
 }
 
-/* Letter */
+/* ===== LETTER ===== */
 .lv_wish_letter {
-    position: absolute;
-    bottom: 18px;
-    left: 50%;
-    width: 360px;
-    padding: 32px 30px;
-    transform: translateX(-50%) translateY(120px);
-    background-color: #fffdfb;
-    border-radius: 3px;
-    box-shadow:
-        0 8px 16px rgba(0,0,0,0.08),
-        0 20px 40px rgba(0,0,0,0.12);
-    display: grid;
-    row-gap: 20px;
-    opacity: 0;
-    transition:
-        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.6s ease;
-    z-index: 3;
+	position: absolute;
+	bottom: 24px;
+	left: 50%;
+	width: 360px;
+	padding: 32px;
+	transform: translateX(-50%) translateY(140px);
+	background: rgba(254, 246, 250, 0.96);
+	border-radius: 10px;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+	backdrop-filter: blur(2px);
+	opacity: 0;
+	transition: 0.9s ease;
+	z-index: 20;
+	text-align: center;
 }
 
-/* Letter content */
+/* ===== LETTER TEXT ===== */
 .lv_wish_letterTo {
-    font-size: 15px;
-    color: #6b6b6b;
+	font-size: 15px;
+	color: #9a8f95;
 }
 
 .lv_wish_letterContent {
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #3f3f3f;
+	font-size: 16px;
+	line-height: 26px;
+	color: #6a5f65;
 }
 
 .lv_wish_letterSign {
-    font-size: 15px;
-    text-align: center;
-    color: #5a5a5a;
+	font-size: 15px;
+	color: #8a7f85;
 }
 
-/* Open state */
+/* ===== SEAL ===== */
+.lv_wish_envelopeSeal {
+	position: absolute;
+	bottom: 86px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 34px;
+	height: 34px;
+	background: radial-gradient(circle at 30% 30%, rgba(254, 246, 250, 0.9), rgba(249, 211, 224, 0.7));
+	border-radius: 50%;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+	z-index: 5;
+	transition:
+		transform 0.4s ease,
+		opacity 0.3s ease;
+}
+
+/* ===== OPEN STATE ===== */
 .lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_envelopeFlap {
-    transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
 }
 
 .lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_letter {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
+	transform: translateX(-50%) translateY(-30px);
+	opacity: 1;
+}
+
+.lv_wish_toggle:checked + .lv_wish_envelope .lv_wish_envelopeSeal {
+	opacity: 0;
+	transform: translateX(-50%) scale(0.6);
+}
+
+/* ============================= */
+/* ===== RESPONSIVE ===== */
+/* ============================= */
+
+@media (min-width: 1000px) {
+	.lv_wish_envelope {
+		width: 520px;
+		height: 360px;
+		transform: translateY(-100px);
+		transition: all 0.8s;
+	}
+
+	.lv_wish_toggle:checked + .lv_wish_envelope {
+		transform: translateY(0px);
+		transition: all 0.8s;
+	}
+
+	.lv_wish_envelopeBack {
+		height: 230px;
+	}
+
+	.lv_wish_envelopeLeft,
+	.lv_wish_envelopeRight {
+		border-top: 115px solid transparent;
+		border-bottom: 115px solid transparent;
+	}
+
+	.lv_wish_envelopeLeft {
+		border-left: 260px solid rgba(249, 211, 224, 0.6);
+	}
+
+	.lv_wish_envelopeRight {
+		border-right: 260px solid rgba(249, 211, 224, 0.45);
+	}
+
+	.lv_wish_envelopeFlap {
+		top: 130px;
+		border-left: 260px solid transparent;
+		border-right: 260px solid transparent;
+		border-top: 140px solid rgba(249, 211, 224, 0.9);
+	}
+}
+
+@media (max-width: 999px) {
+	.lv_wish_envelope {
+		width: 320px;
+		height: 240px;
+		transform: translateY(-60px);
+		transition: all 0.5s;
+	}
+
+	.lv_wish_toggle:checked + .lv_wish_envelope {
+		transform: translateY(0px);
+		transition: all 0.5s;
+	}
+
+	.lv_wish_envelopeBack {
+		height: 150px;
+	}
+
+	.lv_wish_envelopeLeft,
+	.lv_wish_envelopeRight {
+		border-top: 75px solid transparent;
+		border-bottom: 75px solid transparent;
+	}
+
+	.lv_wish_envelopeLeft {
+		border-left: 160px solid rgba(249, 211, 224, 0.6);
+	}
+
+	.lv_wish_envelopeRight {
+		border-right: 160px solid rgba(249, 211, 224, 0.45);
+	}
+
+	.lv_wish_envelopeFlap {
+		top: 90px;
+		border-left: 160px solid transparent;
+		border-right: 160px solid transparent;
+		border-top: 100px solid rgba(249, 211, 224, 0.9);
+	}
+
+	.lv_wish_envelopeSeal {
+		bottom: 42px;
+	}
 }
