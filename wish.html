@@ -53,6 +53,12 @@
 
 		<!-- Main content of the page -->
 		<main>
+			<div class="lv_revealOverlay">
+				<div class="lv_revealContent">
+					<div class="lv_revealText">Có điều dành cho bạn...</div>
+					<div class="lv_revealSub">Hãy chờ một chút nhé ❤️</div>
+				</div>
+			</div>
 			<!-- Main content -->
 			<div class="container">
 				<div class="lv_wish_pageWrapper">
@@ -83,9 +89,7 @@
 								<div class="lv_wish_letter">
 									<div class="lv_wish_letterTo">Gửi: My Love</div>
 
-									<div class="lv_wish_letterContent">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. In quo repellat esse consequatur architecto odio eligendi accusantium, dolore nobis perferendis eveniet non ipsum quia porro deleniti. Culpa, delectus expedita? Rem!
-									</div>
+									<div class="lv_wish_letterContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quo repellat esse consequatur architecto odio eligendi accusantium, dolore nobis perferendis eveniet non ipsum quia porro deleniti. Culpa, delectus expedita? Rem!</div>
 
 									<div class="lv_wish_letterSign">— Anh Yêu</div>
 								</div>
@@ -105,11 +109,66 @@
 			canvas {
 				opacity: 0.08;
 			}
+
+			.lv_revealOverlay {
+				position: fixed;
+				inset: 0;
+				background: radial-gradient(circle, #ffe6ef, #ffc0d9);
+				z-index: 9999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition:
+					opacity 1.2s ease,
+					visibility 1.2s ease;
+			}
+
+			.lv_revealOverlay.hide {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			.lv_revealContent {
+				text-align: center;
+				animation: fadeUp 1.5s ease;
+			}
+
+			.lv_revealText {
+				font-size: 24px;
+				font-weight: 700;
+				color: #b4004e;
+			}
+
+			.lv_revealSub {
+				margin-top: 8px;
+				font-size: 14px;
+				color: #8a003a;
+				opacity: 0.8;
+			}
+
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(12px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 		</style>
 
 		<script src="/assets/js/vendor.js"></script>
 		<!-- vendor.js -->
 		<script src="/assets/js/main.js"></script>
 		<!-- main.js -->
+
+		<script>
+			jQuery(function ($) {
+				setTimeout(function () {
+					$(".lv_revealOverlay").addClass("hide");
+				}, 3000);
+			});
+		</script>
 	</body>
 </html>
